@@ -2,7 +2,7 @@ let movies = [
     {
         id: 0,
         name: "Star Wars - The new one",
-        score: 0.1
+        score: 1
     },
     {
         id: 1,
@@ -36,4 +36,14 @@ export const deleteMovie = id => {
     } else {
         return false;
     }
+};
+
+export const addMovie = (name, score) => {
+    const newMovie = {
+        id: `${movies.length + 1}`,
+        name,
+        score
+    };
+    movies.push(newMovie);
+    return newMovie
 };
